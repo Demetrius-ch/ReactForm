@@ -1,0 +1,1 @@
+Ce projet est une application React qui contient un formulaire de saisie de données. Il s'agit d'un projet de base avec un formulaire qui permet aux utilisateurs de saisir des informations dans des champs d'entrée.
