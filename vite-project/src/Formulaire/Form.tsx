@@ -25,11 +25,17 @@ export default function Form() {
       GB: "GBR",
       CF: "CAR",
     };
-    return countryNames[country] || country;
+    return countryNames[country] || country.slice(0, 3);
   };
   const validateEmail = (email: string) => {
     const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return re.test(email);
+  };
+  const restForm = () => {
+    setName("");
+    setEmail("");
+    setPhoneNumber(undefined);
+    setMessage("");
   };
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -47,6 +53,7 @@ export default function Form() {
     setTimeout(() => {
       setLoading(false);
       alert(`Message envoyé à ${name}`);
+      restForm();
     }, 2000);
   };
   return (
@@ -86,7 +93,7 @@ export default function Form() {
                 Your name : <span className="text-red-500">*</span>
               </label>
               <input
-                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline text-sm"
                 id="name"
                 type="text"
                 placeholder="Your name : "
@@ -100,10 +107,10 @@ export default function Form() {
                 className="block text-gray-700 text-sm font-bold mb-2"
                 htmlFor="email"
               >
-                Email :
+                Email : <span className="text-red-500">*</span>
               </label>
               <input
-                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline text-sm"
                 id="email"
                 type="email"
                 placeholder="you@company.com"
@@ -117,7 +124,7 @@ export default function Form() {
                 className="block text-gray-700 text-sm font-bold mb-2"
                 htmlFor="phone"
               >
-                Phone number :
+                Phone number : <span className="text-red-500">*</span>
               </label>
               <PhoneInput
                 international
@@ -153,22 +160,23 @@ export default function Form() {
             </div>
             <div className="mb-4">
               <label className="block text-gray-700 text-sm font-bold mb-2">
-                How can we help ?
+                How can we help ? <span className="text-red-500">*</span>
               </label>
               <textarea
-                className="shadow appearance-none border rounder w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadox-outline-none"
+                className="shadow appearance-none border rounder w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadox-outline-none text-sm resize-none"
                 name=""
                 id="project"
                 placeholder="Tell us a little about this project."
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
                 required
+                rows={6}
               ></textarea>
             </div>
 
             <div className="mb-4">
               <label className="block text-gray-700 text-sm font-bold mb-2">
-                Services :
+                Services 
               </label>
               <div className="grid grid-cols-2 gap-2">
                 <label className="flex items-center">
