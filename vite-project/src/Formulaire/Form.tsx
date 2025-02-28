@@ -78,8 +78,8 @@ export default function Form() {
         </div>
         <div className="w-1/2 p-6 flex  flex-col bg-gray-50 overflow-y-auto">
           <div className="flex  space-x-2 ">
-            <HiArrowRight className="text-[30px] " />
-            <h2 className="text-[30px] text-base font-bold mb-6 tracking-tight leading-10">
+            <HiArrowRight className="text-[30px] min-h-10 " />
+            <h2 className="text-[30px] text-base font-bold mb-6 tracking-tight leading-10 w-auto ">
               Let's level up your brand, together
             </h2>
           </div>
@@ -93,7 +93,7 @@ export default function Form() {
                 Your name : <span className="text-red-500">*</span>
               </label>
               <input
-                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline text-sm"
+                className="shadow appearance-none border rounded w-[400px] py-2 px-3  text-gray-700 leading-tight focus:outline-none focus:shadow-outline text-sm"
                 id="name"
                 type="text"
                 placeholder="Your name : "
@@ -110,7 +110,7 @@ export default function Form() {
                 Email : <span className="text-red-500">*</span>
               </label>
               <input
-                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline text-sm"
+                className="shadow appearance-none border rounded w-[400px] py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline text-sm"
                 id="email"
                 type="email"
                 placeholder="you@company.com"
@@ -132,7 +132,7 @@ export default function Form() {
                 value={phoneNumber}
                 onChange={setPhoneNumber}
                 placeholder="Entre phone number"
-                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-gray-300"
+                className="shadow appearance-none border rounded w-[400px] py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-gray-300"
                 countrySelectProps={{ unicodeFlages: true }}
                 inputComponent={({ ...rest }) => (
                   <input
@@ -163,7 +163,7 @@ export default function Form() {
                 How can we help ? <span className="text-red-500">*</span>
               </label>
               <textarea
-                className="shadow appearance-none border rounder w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadox-outline-none text-sm resize-none"
+                className="shadow appearance-none border rounded w-[400px] py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadox-outline-none text-sm resize-none"
                 name=""
                 id="project"
                 placeholder="Tell us a little about this project."
