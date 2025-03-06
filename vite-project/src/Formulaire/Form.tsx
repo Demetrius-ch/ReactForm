@@ -85,7 +85,7 @@ export default function Form() {
           </div>
 
           <form className="flex-grow" onSubmit={handleSubmit}>
-            <div className="mb-4">
+            <div className="mb-4 ml-4">
               <label
                 className="block text-gray-700 text-sm font-bold mb-2"
                 htmlFor="name"
@@ -102,7 +102,7 @@ export default function Form() {
                 required
               />
             </div>
-            <div className="mb-4">
+            <div className="mb-4 ml-4">
               <label
                 className="block text-gray-700 text-sm font-bold mb-2"
                 htmlFor="email"
@@ -119,7 +119,7 @@ export default function Form() {
                 required
               />
             </div>
-            <div className="mb-4">
+            <div className="mb-4 ml-4">
               <label
                 className="block text-gray-700 text-sm font-bold mb-2"
                 htmlFor="phone"
@@ -158,7 +158,7 @@ export default function Form() {
                 )}
               ></PhoneInput>
             </div>
-            <div className="mb-4">
+            <div className="mb-4 ml-4">
               <label className="block text-gray-700 text-sm font-bold mb-2">
                 How can we help ? <span className="text-red-500">*</span>
               </label>
@@ -174,7 +174,7 @@ export default function Form() {
               ></textarea>
             </div>
 
-            <div className="mb-4">
+            <div className="mb-4 ml-4">
               <label className="block text-gray-700 text-sm font-bold mb-2">
                 Services 
               </label>
